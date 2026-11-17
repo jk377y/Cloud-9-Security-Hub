@@ -1,0 +1,82 @@
+.standards__list {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.standards__row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: rgba(10, 28, 51, 0.7);
+  border: 1px solid rgba(18, 66, 110, 0.6);
+  border-radius: 4px;
+}
+
+/* Hexagon-ish badge holding the standard's short name */
+.standards__badge {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--cyan);
+  background: rgba(25, 200, 255, 0.08);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.standards__name {
+  flex: 1;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.standards__version {
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+/* ---------- On/off switch ---------- */
+.standards__toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.standards__switch {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  border-radius: 10px;
+  background: #24405e;
+}
+
+.standards__switch::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  transition: transform 0.15s;
+}
+
+.standards__toggle--on .standards__switch {
+  background: var(--cyan);
+  box-shadow: 0 0 10px rgba(25, 200, 255, 0.6);
+}
+
+.standards__toggle--on .standards__switch::after {
+  transform: translateX(18px);
+}
+
+.standards__state {
+  width: 24px;
+  font-size: 11px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,60 @@
+.insights__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+  height: 100%;
+}
+
+.insights__tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border: 1px solid rgba(18, 66, 110, 0.8);
+  border-radius: 4px;
+  background: rgba(10, 28, 51, 0.7);
+}
+
+.insights__label {
+  padding-right: 24px; /* keeps long labels clear of the warning icon */
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.insights__warn {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+}
+
+.insights__row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.insights__value {
+  font-size: 30px;
+  font-weight: 500;
+  color: var(--cyan);
+}
+
+.insights__change {
+  font-size: 14px;
+}
+
+.insights__worst {
+  font-size: 18px;
+}
+
+.insights__foot {
+  white-space: nowrap;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-muted);
+}

@@ -1,0 +1,16 @@
+.overall__delta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.overall__delta-label {
+  color: var(--text-muted);
+}
+
+.overall__delta-value {
+  font-weight: 600;
+  font-size: 13px;
+}

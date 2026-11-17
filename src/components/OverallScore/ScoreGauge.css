@@ -1,0 +1,74 @@
+.gauge {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gauge__svg {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.gauge__label {
+  fill: var(--text);
+  font-size: 13px;
+}
+
+/* Filled blocks start invisible and light up one after another */
+.gauge__seg--filled {
+  animation: segIn 0.35s ease-out backwards;
+}
+
+@keyframes segIn {
+  from {
+    opacity: 0;
+  }
+}
+
+/* ---------- Center readout ---------- */
+.gauge__center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -52%);
+  text-align: center;
+}
+
+.gauge__value {
+  font-size: 76px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+.gauge__max {
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--text-muted);
+}
+
+.gauge__caption {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* ---------- Grade badge (FAIR / GOOD / POOR) ---------- */
+.gauge__grade {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  border: 1px solid;
+  border-radius: 3px;
+  background: rgba(5, 16, 32, 0.85);
+  text-shadow: 0 0 10px currentColor;
+}

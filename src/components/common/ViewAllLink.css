@@ -1,0 +1,16 @@
+.view-all {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 7px 12px;
+  color: var(--cyan);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  background: rgba(25, 200, 255, 0.04);
+  transition: background 0.15s;
+}
+
+.view-all:hover {
+  background: rgba(25, 200, 255, 0.12);
+}

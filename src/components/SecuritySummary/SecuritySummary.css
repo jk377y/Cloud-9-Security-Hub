@@ -1,0 +1,41 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary__list {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.summary__row {
+  display: grid;
+  grid-template-columns: 26px 48px 1fr auto;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 8px;
+  border-bottom: 1px solid rgba(18, 66, 110, 0.5);
+}
+
+.summary__value {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.summary__label {
+  font-size: 11px;
+}
+
+.summary__trend {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.summary__pct {
+  font-size: 11px;
+}

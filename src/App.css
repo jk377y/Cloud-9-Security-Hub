@@ -1,0 +1,66 @@
+/* ---------- Page shell ---------- */
+.app {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  height: 100vh;
+  min-width: 1400px;
+  min-height: 800px;
+  padding: 14px 18px;
+}
+
+.app__main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-height: 0;
+}
+
+/* ---------- Dashboard layout ---------- */
+.dashboard {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1.8fr) minmax(0, 1fr);
+  gap: 12px;
+}
+
+/* Top block: four columns, with the gauge and findings running the full height */
+.dashboard__top {
+  display: grid;
+  grid-template-columns: 22fr 27fr 24fr 25fr;
+  grid-template-rows: minmax(0, 1.12fr) minmax(0, 1.3fr);
+  grid-template-areas:
+    'standards score breakdown findings'
+    'summary   score failed    findings';
+  gap: 12px;
+  min-height: 0;
+}
+
+/* Bottom block: wide account panel plus the insights tiles */
+.dashboard__bottom {
+  display: grid;
+  grid-template-columns: 2.1fr 1fr;
+  gap: 12px;
+  min-height: 0;
+}
+
+/* Every area stretches its component to fill the cell */
+.dashboard__top > div,
+.dashboard__bottom > div {
+  display: flex;
+  min-height: 0;
+  min-width: 0;
+}
+.dashboard__top > div > .panel,
+.dashboard__bottom > div > .panel {
+  flex: 1;
+  min-width: 0;
+}
+
+.area-standards { grid-area: standards; }
+.area-summary   { grid-area: summary; }
+.area-score     { grid-area: score; }
+.area-breakdown { grid-area: breakdown; }
+.area-failed    { grid-area: failed; }
+.area-findings  { grid-area: findings; }

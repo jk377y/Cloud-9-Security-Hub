@@ -1,0 +1,67 @@
+/* ---------- Panel frame ---------- */
+.panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 14px 16px;
+  background: linear-gradient(180deg, rgba(10, 28, 51, 0.85), rgba(6, 16, 31, 0.9));
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  box-shadow: 0 0 18px rgba(25, 150, 255, 0.12), inset 0 0 24px rgba(25, 150, 255, 0.05);
+}
+
+/* Bright corner accents on the top-left and bottom-right */
+.panel::before,
+.panel::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--cyan);
+  pointer-events: none;
+}
+.panel::before {
+  top: -1px;
+  left: -1px;
+  border-right: none;
+  border-bottom: none;
+  border-top-left-radius: 6px;
+}
+.panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-left: none;
+  border-top: none;
+  border-bottom-right-radius: 6px;
+}
+
+/* ---------- Panel header ---------- */
+.panel__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.panel__title {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.panel__info {
+  color: var(--text-muted);
+}
+
+.panel__header-right {
+  margin-left: auto;
+}
+
+.panel__body {
+  flex: 1;
+  min-height: 0;
+}

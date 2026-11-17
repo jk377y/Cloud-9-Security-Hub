@@ -1,0 +1,48 @@
+.failed {
+  display: flex;
+  flex-direction: column;
+}
+
+.failed__list {
+  flex: 1;
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.failed__row {
+  display: grid;
+  grid-template-columns: 52px 58px 1fr 70px;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 4px;
+  font-size: 11px;
+  border-bottom: 1px solid rgba(18, 66, 110, 0.5);
+}
+
+.failed__tag {
+  padding: 2px 0;
+  text-align: center;
+  font-size: 9px;
+  color: var(--red);
+  border: 1px solid var(--red);
+  border-radius: 2px;
+  background: rgba(255, 77, 79, 0.1);
+}
+
+.failed__title {
+  color: var(--text-muted);
+}
+
+.failed__sev {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.failed__sev i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
